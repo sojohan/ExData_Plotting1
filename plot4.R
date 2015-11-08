@@ -1,6 +1,7 @@
 # This program use library Lubridate
 # Importing the full data set 
 # It was nessecary to add the encoding in order to get the english weekdays on plots
+Sys.setlocale("LC_TIME","en_US.UTF-8")
 household<-read.csv("./household_power_consumption.txt", header=TRUE, sep=";",encoding = "en_US.UTF-8")
 household$Date1<-dmy(household$Date)
 

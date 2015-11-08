@@ -1,5 +1,6 @@
 # This program use library lubridate
 # importing the dataset with encoding US. 
+Sys.setlocale("LC_TIME","en_US.UTF-8")
 household<-read.csv("./household_power_consumption.txt", header=TRUE, sep=";",encoding = "en_US.UTF-8")
 # New variable Date1 with dmy format using lubridate
 household$Date1<-dmy(household$Date)
